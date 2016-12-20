@@ -26,6 +26,10 @@ However, opening up to third parties allows them to potentially  steal from you,
 
 This allows for third parties to more easily collect information on you, and leak<sup>[2](#footnote2)</sup> it. Not only does this open up Bitcoin to regulatory bodies, but also hackers.
 
+* Counter Argument 1.1a.1/2: Alternative distrubuted trust systems that checkpoint to the blockchain
+
+Side chains, and side-graphs and other distributed trust networks that may not have the same level of security but are sufficient for large numbers of small transactions should mitigate any security and privacy concerns.   There are many good examples of alt coins that have solved "speed" issues at the expense of security.   Done right, a burn-and-code merger with an alt coin could grow the user base, allow for side-chain scaling and resolve security and privacy issues.  See below for more side-chain discussion.
+
 **1.1b OpenTransactions**
 
 Content pending research...
@@ -42,11 +46,13 @@ Each of these are decentralized versions of the above, designed to reduce the am
 
 Like with [Off-Chain Third Parties](#Offchain), there are often security concerns sited, such as the ability to steal other parties' funds from Strawpay channels.<sup>[3](#footnote3)</sup>
 
+* Counter Argument 1.1d.1.1: This is impossible with Lightning network.  Hubs cannot spend funds.
 
 *1.1d.2 No Current Implementation*
 
 Because there is no current implementation of it, there is no way to be certain this system is a workable solution.
 
+* Counter Argument 1.1d.1.1: Lightning has been implemented and has been tested.
 
 Argument 2 Con: Miners/Full Nodes Cannot Handle Expansion
 =========
@@ -57,9 +63,13 @@ Pools and Miners in some places of the world have difficulty connecting to some 
 
 Because the change is only made to the *maximum* blocksize, it would not introduce an immediate resource impact. This time gap would also give time to implement several bandwidth saving solutions that have been created/theorized specifically to reduce these problems.
 
+* Counter-counter argument 2.1.1: Miners mining large blocks will be able to sweep in more low-fee transactions, collecting fees that currently expire out of the mempool.   This can increase the number of transactions per block immediately.
+
 ### Counter Argument 2.2: Decreased node-count is not necessarily increased Centralization
 
 Because we would have to trade this off (currently) with [Off-Chain Third Parties](#Offchain), that is also an increase in centralization. So the question is more "Which increases *overall* decentralization?" instead of "Will this decrease decentralization?".
+
+* Counter-counter argument 2.2.1: Lightning network and side chains can, should and most likely will be equally decentralized.
 
 ### Counter Argument 2.3: Several Large Miners Have Agreed To Adopt A Change
 
@@ -91,6 +101,8 @@ The less notice there is before a hard fork, the more likely it is to fracture t
 
 ### Counter Argument 4.1: The last hardfork increasing the block size to 1 MB was performed with merely 2 months notice.<sup>[7](#footnote7)</sup>
 
+* Counter-counter argument 4.1.1: The last hard fork was not contentious.
+
 ### Counter Argument 4.2: The Hardfork Can Be Used To Make Other Useful Changes
 
 
@@ -112,7 +124,6 @@ This is a simplified model that does not take fee markets into account, but it w
 Increasing the blocksize would allow faster bloating of the UTXO database.<sup>[9](#footnote10)</sup> Because the ability to change this scales roughly linearly to block size, increasing the blocksize increases the potential bloat rate from a bad actor. This reduces the ability to run a full node significantly, as RAM is an expensive resource to use compared to disk space.
 
 *5.1.1 The effect of this can be dramatically reduced by storing the UTXO database on disk,<sup>[11](#footnote11)</sup> and by storing it more efficiently.*
-
 
 Argument 6 Con: When Would A Hardfork Occur?
 =========
@@ -191,6 +202,10 @@ Evidence
 
 1. [Bitcoin Network Capacity Analysis – Part 1: Macro Block Trends](https://tradeblock.com/blog/bitcoin-network-capacity-analysis-part-1-macro-block-trends)
 
+Argument 9: The majority of users support increasing block size
+=========
+
+Currently there are Segregated Witness, which raises the block size to 4MB, Bitcoin Unlimited which has an unknown size increase based on handing power to miners to make the decision, and Bitcoin Classic, which raises it to 2MB.  None of these has garnered even a simple majority of support, let alone the 95% or 75% needed to activate.   However, combined, the clear majority of miners support a block size increase: https://coin.dance/blocks
 
 References
 =========
